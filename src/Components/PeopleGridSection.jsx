@@ -27,14 +27,14 @@ const profiles = [
     name: "Zoya Ahmed",
     role: "Marketing Manager",
     likes: "1.4K",
-    image: "https://randomuser.me/api/portraits/women/33.jpg",
+    image: "https://randomuser.me/api/portraits/women/32.jpg",
     description: "Drives brand strategies and growth.",
   },
   {
     name: "Imran Qureshi",
     role: "DevOps Engineer",
     likes: "623",
-    image: "https://randomuser.me/api/portraits/men/77.jpg",
+    image: "https://randomuser.me/api/portraits/men/44.jpg",
     description: "Streamlines deployments and infra.",
   },
   {
@@ -48,35 +48,35 @@ const profiles = [
     name: "Omar Saleem",
     role: "AI Researcher",
     likes: "1.1K",
-    image: "https://randomuser.me/api/portraits/men/85.jpg",
+    image: "https://randomuser.me/api/portraits/men/32.jpg",
     description: "Solves problems with AI models.",
   },
   {
     name: "Hiba Rizvi",
     role: "Content Writer",
     likes: "997",
-    image: "https://randomuser.me/api/portraits/women/64.jpg",
+    image: "https://randomuser.me/api/portraits/women/44.jpg",
     description: "Writes impactful stories and blogs.",
   },
   {
     name: "Faizan Shah",
     role: "Game Developer",
     likes: "765",
-    image: "https://randomuser.me/api/portraits/men/70.jpg",
+    image: "https://randomuser.me/api/portraits/men/32.jpg",
     description: "Builds immersive game experiences.",
   },
   {
     name: "Ayesha Butt",
     role: "Teacher",
     likes: "1.3K",
-    image: "https://randomuser.me/api/portraits/women/17.jpg",
+    image: "https://randomuser.me/api/portraits/women/44.jpg",
     description: "Loves sharing knowledge with kids.",
   },
   {
     name: "Rizwan Mir",
     role: "SEO Expert",
     likes: "890",
-    image: "https://randomuser.me/api/portraits/men/23.jpg",
+    image: "https://randomuser.me/api/portraits/men/32.jpg",
     description: "Optimizes online visibility and traffic.",
   },
   {
@@ -90,7 +90,7 @@ const profiles = [
 
 const PeopleGridSection = () => {
   return (
-    <div className="py-16 bg-[#1a1a1a] text-white px-4 md:px-10">
+    <div className="py-16 bg-[#000] text-white px-4 md:px-10">
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
         {profiles.map((person, index) => (

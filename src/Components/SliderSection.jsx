@@ -6,7 +6,7 @@ const people = [
     name: "Ali Raza",
     role: "Businessman",
     description: "Specialist in textile export & brand strategy.",
-    image: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=400&q=80",
+    image: "public/images/men.jpeg",
     date: "April 10, 2025",
   },
   {
@@ -58,7 +58,7 @@ const SliderSection = () => {
   };
 
   return (
-    <div className="relative py-12 bg-[#111] text-white">
+    <div className="relative py-12 bg-[#000] text-white">
       <h2 className="text-3xl text-center font-bold mb-8">Featured People</h2>
 
       <div className="relative max-w-7xl mx-auto px-6">
@@ -89,7 +89,7 @@ const SliderSection = () => {
               style={{ backgroundImage: `url(${person.image})` }}
             >
               {/* Overlay */}
-              <div className="absolute inset-0 bg-black bg-opacity-60 rounded-xl transition-all duration-300 group-hover:bg-opacity-70"></div>
+              <div className="absolute inset-0 bg-opacity-60 rounded-xl transition-all duration-300 group-hover:bg-opacity-70"></div>
 
               <div className="relative z-10">
                 <span className="bg-red-500 px-3 py-1 rounded-full text-xs font-semibold">

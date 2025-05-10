@@ -38,7 +38,7 @@ const Hero = () => {
       ></video>
 
       {/* Dark Overlay */}
-      <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-70"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-opacity-70"></div>
 
       {/* Content */}
       <div className="relative z-10 flex items-center justify-end h-full px-8">
