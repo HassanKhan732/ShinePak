@@ -1,5 +1,5 @@
 import React from 'react';
-// import bgVideo from '../videos/vid1.mp4';sw
+// import bgVideo from '../videos/vid1.mp4'
 const profiles = [
   {
     name: 'Ali Raza',
@@ -29,8 +29,8 @@ const Hero = () => {
     <section className="relative h-screen w-full overflow-hidden">
       {/* Background Video */}
       <video
-        className="absolute top-0 left-0 w-full h-full object-cover"
-        src="public/videos/vid1.mp4"
+        className="absolute top-0 left-0 w-full h-full object-cover position-center "
+        src="/videos/vid1.mp4"
         autoPlay
         muted
         loop
