@@ -85,11 +85,11 @@ const SliderSection = () => {
           {people.map((person, index) => (
             <div
               key={index}
-              className="min-w-[240px] h-[280px] bg-cover bg-center rounded-xl shadow-lg relative flex flex-col justify-between p-4"
+              className="min-w-[240px] h-[280px] bg-cover bg-center rounded-xl shadow-lg relative flex flex-col justify-between p-4 transform transition-transform duration-300 hover:scale-105 group"
               style={{ backgroundImage: `url(${person.image})` }}
             >
               {/* Overlay */}
-              <div className="absolute inset-0 bg-black bg-opacity-60 rounded-xl"></div>
+              <div className="absolute inset-0 bg-black bg-opacity-60 rounded-xl transition-all duration-300 group-hover:bg-opacity-70"></div>
 
               <div className="relative z-10">
                 <span className="bg-red-500 px-3 py-1 rounded-full text-xs font-semibold">
@@ -100,6 +100,11 @@ const SliderSection = () => {
               <div className="relative z-10">
                 <h3 className="text-lg font-bold">{person.name}</h3>
                 <p className="text-sm text-gray-300">{person.description}</p>
+
+                {/* Extra text below on hover */}
+                <p className="text-xs text-gray-400 mt-2 opacity-0 transform translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
+                  Learn more about {person.name}
+                </p>
               </div>
 
               <div className="relative z-10 text-xs text-gray-400">{person.date}</div>
