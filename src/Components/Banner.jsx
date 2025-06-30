@@ -1,25 +1,67 @@
 import React from "react";
-import Bnr from '../../public/images/bnr2.webp'
+
 const Banner = () => {
   return (
-    <section className="relative bg-[#000] py-12 px-6 md:px-16">
-      <div className="max-w-7xl mx-auto">
-        <div className="relative group overflow-hidden rounded-lg">
+    <>
+      <style>
+        {`
+          .banner-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 0.5rem;
+            max-width: 1280px;
+            margin: 0 auto;
+                height: 16rem;
+
+          }
+          .banner-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: opacity 0.5s ease-in-out;
+          }
+          .banner-text-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+          }
+          .banner-text {
+            font-size: 2.25rem;
+            font-weight: bold;
+            color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+          }
+          .banner-container:hover .banner-image {
+            opacity: 0.5;
+          }
+          .banner-container:hover .banner-text-overlay {
+            opacity: 1;
+          }
+        `}
+      </style>
+      <section style={{ backgroundColor: "#000", padding: "3rem 1.5rem" }}>
+        <div className="banner-container">
           {/* Image */}
           <img
-            src={Bnr} // Replace with your image URL
+            src="/images/bnr2.webp" // Replace with your image path
             alt="Banner"
-            className="w-full h-[400px] object-cover transition-opacity duration-500 ease-in-out group-hover:opacity-50"
+            className="banner-image"
+            onError={(e) => console.log("Image failed to load:", e)}
           />
           {/* Text Overlay */}
-          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
-            <h2 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg">
-              Welcome to Shine Pak
-            </h2>
+          <div className="banner-text-overlay">
+            <h2 className="banner-text">Grow With ShinePak</h2>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
