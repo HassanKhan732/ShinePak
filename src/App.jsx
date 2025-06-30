@@ -5,6 +5,7 @@ import Hero from './Components/Hero'
 import SliderSection from './Components/SliderSection'
 import  PeopleGridSection from './Components/PeopleGridSection'
 import Footer from './Components/Footer'
+import Banner from './Components/Banner'
 const App = () => {
   return (
     <>
@@ -13,6 +14,7 @@ const App = () => {
     <Hero></Hero>
     <SliderSection></SliderSection>
     <PeopleGridSection></PeopleGridSection>
+    <Banner></Banner>
     <Footer></Footer>
     </>
   )
