@@ -50,7 +50,7 @@ const Hero = () => {
         </div>
         {/* Explore More Button */}
         <Link
-          to="/more-profiles"
+          to="/profiles"
           className="mt-8 inline-block bg-red-600 text-white px-6 py-3 rounded-lg text-base font-semibold hover:bg-red-700 transition-colors duration-300"
         >
           Explore More

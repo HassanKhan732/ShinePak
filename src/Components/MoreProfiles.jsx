@@ -21,9 +21,7 @@ const MoreProfiles = () => {
   return (
     <section className="bg-black text-white py-12 px-6 md:px-16 min-h-screen">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-3xl md:text-4xl font-bold text-center mb-8">
-          More Profiles
-        </h1>
+    
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {profiles.map((profile) => (
             <Link
