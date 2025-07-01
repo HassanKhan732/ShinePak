@@ -1,50 +1,7 @@
 import React, { useRef } from "react";
+import { Link } from "react-router-dom";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-
-const people = [
-  {
-    name: "Ali Raza",
-    role: "Businessman",
-    description: "Specialist in textile export & brand strategy.",
-    image: "public/images/men.jpeg",
-    date: "April 10, 2025",
-  },
-  {
-    name: "Sara Khan",
-    role: "Teacher",
-    description: "Passionate educator in modern learning systems.",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80",
-    date: "March 22, 2025",
-  },
-  {
-    name: "Ahmed Ali",
-    role: "Developer",
-    description: "Full-stack developer and system architect.",
-    image: "https://images.unsplash.com/photo-1603415526960-f8f10f0b8f3b?auto=format&fit=crop&w=400&q=80",
-    date: "Feb 15, 2025",
-  },
-  {
-    name: "Zara Sheikh",
-    role: "Designer",
-    description: "Creative mind behind top fashion campaigns.",
-    image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80",
-    date: "May 1, 2025",
-  },
-  {
-    name: "Noman Tariq",
-    role: "Marketing Lead",
-    description: "Drives revenue through digital campaigns.",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80",
-    date: "Jan 19, 2025",
-  },
-  {
-    name: "Areeba Qureshi",
-    role: "Psychologist",
-    description: "Helping people through emotional healing.",
-    image: "https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&w=400&q=80",
-    date: "March 5, 2025",
-  },
-];
+import sliderProfiles from "./sliderData";
 
 const SliderSection = () => {
   const sliderRef = useRef(null);
@@ -82,9 +39,10 @@ const SliderSection = () => {
           ref={sliderRef}
           className="flex gap-4 overflow-x-auto overflow-y-hidden scrollbar-hide scroll-smooth px-10"
         >
-          {people.map((person, index) => (
-            <div
-              key={index}
+          {sliderProfiles.map((person) => (
+            <Link
+              key={person.id}
+              to={`/slider-profile/${person.id}`}
               className="min-w-[240px] h-[280px] bg-cover bg-center rounded-xl shadow-lg relative flex flex-col justify-between p-4 transform transition-transform duration-300 hover:scale-105 group"
               style={{ backgroundImage: `url(${person.image})` }}
             >
@@ -108,7 +66,7 @@ const SliderSection = () => {
               </div>
 
               <div className="relative z-10 text-xs text-gray-400">{person.date}</div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

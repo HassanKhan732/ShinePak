@@ -1,101 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FaThumbsUp } from "react-icons/fa";
-
-const profiles = [
-  {
-    name: "Ali Khan",
-    role: "Frontend Developer",
-    likes: "1.2K",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
-    description: "Expert in React and UI design.",
-  },
-  {
-    name: "Sana Malik",
-    role: "UX Designer",
-    likes: "934",
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
-    description: "Focused on creating intuitive experiences.",
-  },
-  {
-    name: "Hamza Noor",
-    role: "Backend Engineer",
-    likes: "781",
-    image: "https://randomuser.me/api/portraits/men/58.jpg",
-    description: "Loves building scalable systems.",
-  },
-  {
-    name: "Zoya Ahmed",
-    role: "Marketing Manager",
-    likes: "1.4K",
-    image: "https://randomuser.me/api/portraits/women/32.jpg",
-    description: "Drives brand strategies and growth.",
-  },
-  {
-    name: "Imran Qureshi",
-    role: "DevOps Engineer",
-    likes: "623",
-    image: "https://randomuser.me/api/portraits/men/44.jpg",
-    description: "Streamlines deployments and infra.",
-  },
-  {
-    name: "Mehak Tariq",
-    role: "Psychologist",
-    likes: "842",
-    image: "https://randomuser.me/api/portraits/women/26.jpg",
-    description: "Helps people build better lives.",
-  },
-  {
-    name: "Omar Saleem",
-    role: "AI Researcher",
-    likes: "1.1K",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
-    description: "Solves problems with AI models.",
-  },
-  {
-    name: "Hiba Rizvi",
-    role: "Content Writer",
-    likes: "997",
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
-    description: "Writes impactful stories and blogs.",
-  },
-  {
-    name: "Faizan Shah",
-    role: "Game Developer",
-    likes: "765",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
-    description: "Builds immersive game experiences.",
-  },
-  {
-    name: "Ayesha Bhatti",
-    role: "Teacher",
-    likes: "1.3K",
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
-    description: "Loves sharing knowledge with kids.",
-  },
-  {
-    name: "Rizwan Mir",
-    role: "SEO Expert",
-    likes: "890",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
-    description: "Optimizes online visibility and traffic.",
-  },
-  {
-    name: "Nimra Hashmi",
-    role: "HR Manager",
-    likes: "688",
-    image: "https://randomuser.me/api/portraits/women/80.jpg",
-    description: "Connects talent with opportunities.",
-  },
-];
+import allProfiles from "./profilesData";
 
 const PeopleGridSection = () => {
   return (
     <div className="py-16 bg-[#000] text-white px-4 md:px-10">
-
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-        {profiles.map((person, index) => (
-          <div
-            key={index}
+        {allProfiles.map((person) => (
+          <Link
+            key={person.id}
+            to={`/people-profile/${person.id}`}
             className="bg-[#222] rounded-xl shadow-lg p-4 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300 cursor-pointer hover:shadow-xl"
           >
             {/* Top Row */}
@@ -116,7 +31,7 @@ const PeopleGridSection = () => {
             {/* Info */}
             <h3 className="text-lg font-semibold">{person.name}</h3>
             <p className="text-sm text-gray-300 mt-1">{person.description}</p>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

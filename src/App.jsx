@@ -9,6 +9,8 @@ import Banner from "./Components/Banner";
 import Footer from "./Components/Footer";
 import MoreProfiles from "./Components/MoreProfiles";
 import ProfileDetail from "./Components/ProfileDetail";
+import PeopleProfileDetail from "./Components/PeopleProfileDetail";
+import SliderProfileDetail from "./Components/SliderProfileDetail";
 
 const App = () => {
   return (
@@ -29,6 +31,8 @@ const App = () => {
           />
           <Route path="/more-profiles" element={<MoreProfiles />} />
           <Route path="/profile/:id" element={<ProfileDetail />} />
+          <Route path="/people-profile/:id" element={<PeopleProfileDetail />} />
+          <Route path="/slider-profile/:id" element={<SliderProfileDetail />} />
         </Routes>
         <Banner />
         <Footer />
