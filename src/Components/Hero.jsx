@@ -4,7 +4,7 @@ import allProfiles from "./profilesData";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden">
+    <section className="relative min-h-screen w-full overflow-hidden pt-33">
       {/* Background Video */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
@@ -20,7 +20,7 @@ const Hero = () => {
       <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-70"></div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full px-8 py-12">
+      <div className="relative z-10 flex flex-col items-end justify-center h-full px-8 py-12">
         <div className="grid gap-6 max-w-md">
           {allProfiles.slice(0, 3).map((profile) => (
             <Link
