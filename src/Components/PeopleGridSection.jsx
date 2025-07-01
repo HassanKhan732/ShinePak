@@ -66,7 +66,7 @@ const profiles = [
     description: "Builds immersive game experiences.",
   },
   {
-    name: "Ayesha Butt",
+    name: "Ayesha Bhatti",
     role: "Teacher",
     likes: "1.3K",
     image: "https://randomuser.me/api/portraits/women/44.jpg",
