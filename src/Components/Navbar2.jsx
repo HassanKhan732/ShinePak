@@ -1,15 +1,24 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { FaBars, FaYoutube } from 'react-icons/fa';
 
 const creators = [
-  'Muhammad Awais Razzaq – SEO & WP Developer',
-  'Shoaib Zareen – Digital Sales & E-commerce',
-  'Arsalan Rashid – E-Commerce & SaaS Expert',
-  'Muhammad Ahmed – SEO & Blogging Specialist',
-  'M Yasir Khan – GoHighLevel Expert',
+  { id: 0, name: 'Muhammad Awais Razzaq – SEO & WP Developer' },
+  { id: 1, name: 'Shoaib Zareen – Digital Sales & E-commerce' },
+  { id: 2, name: 'Arsalan Rashid – E-Commerce & SaaS Expert' },
+  { id: 3, name: 'Muhammad Ahmed – SEO & Blogging Specialist' },
+  { id: 4, name: 'M Yasir Khan – GoHighLevel Expert' },
 ];
 
-const navLinks = ['Home', 'Trending', 'Creators', 'Stars', 'Profiles', 'Genius Hub', 'Store'];
+const navLinks = [
+  { name: 'Home', path: '/' },
+  { name: 'Trending', path: '/trending' },
+  { name: 'Creators', path: '/creators' },
+  { name: 'Stars', path: '/stars' },
+  { name: 'Profiles', path: '/profiles' },
+  { name: 'Genius Hub', path: '/genius-hub' },
+  { name: 'Store', path: '/store' },
+];
 
 const Navbar2 = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +27,6 @@ const Navbar2 = () => {
     <>
       {/* Navbar */}
       <nav className="w-full h-16 bg-black text-white flex items-center justify-between px-6 shadow-md mt-0">
-        
         {/* Left: Hamburger */}
         <div onClick={() => setIsOpen(true)} className="text-2xl cursor-pointer hover:text-red-500">
           <FaBars />
@@ -26,21 +34,27 @@ const Navbar2 = () => {
 
         {/* Center: Navigation Links */}
         <div className="hidden md:flex gap-5 text-sm font-medium">
-          {navLinks.map((link, i) => (
-            <span
-              key={i}
+          {navLinks.map((link) => (
+            <Link
+              key={link.name}
+              to={link.path}
               className="cursor-pointer hover:text-red-500 transition-colors duration-300"
             >
-              {link}
-            </span>
+              {link.name}
+            </Link>
           ))}
         </div>
 
         {/* Right: YouTube Button */}
-        <button className="flex items-center gap-2 bg-white text-black font-semibold px-4 py-1 rounded-full hover:bg-red-600 hover:text-white transition duration-300">
+        <a
+          href="https://youtube.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 bg-white text-black font-semibold px-4 py-1 rounded-full hover:bg-red-600 hover:text-white transition duration-300"
+        >
           <FaYoutube className="text-xl" />
           YouTube
-        </button>
+        </a>
       </nav>
 
       {/* Sidebar */}
@@ -65,17 +79,27 @@ const Navbar2 = () => {
           </p>
 
           <h3 className="text-md mt-4 font-semibold">Trending Profiles</h3>
-          {creators.map((creator, idx) => (
-            <span key={idx} className="hover:text-red-500 cursor-pointer transition-colors duration-200">
-              {creator}
-            </span>
+          {creators.map((creator) => (
+            <Link
+              key={creator.id}
+              to={`/creator-profile/${creator.id}`}
+              className="hover:text-red-500 cursor-pointer transition-colors duration-200"
+              onClick={() => setIsOpen(false)}
+            >
+              {creator.name}
+            </Link>
           ))}
 
           <div className="mt-4 border-t border-gray-700 pt-4 flex flex-col gap-2">
-            {navLinks.map((link, i) => (
-              <span key={i} className="hover:text-red-500 cursor-pointer transition-colors duration-200">
-                {link}
-              </span>
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                to={link.path}
+                className="hover:text-red-500 cursor-pointer transition-colors duration-200"
+                onClick={() => setIsOpen(false)}
+              >
+                {link.name}
+              </Link>
             ))}
           </div>
         </div>
