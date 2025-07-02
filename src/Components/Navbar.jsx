@@ -40,7 +40,7 @@ const Navbar = () => {
 
         {/* Right: Button */}
         <button className="bg-red-600 text-white px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 md:py-3 rounded-full font-semibold text-xs sm:text-sm md:text-lg transition-all duration-300 hover:bg-red-700 hover:shadow-lg hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50">
-          Get Featured
+          Get Started
         </button>
       </div>
     </nav>
