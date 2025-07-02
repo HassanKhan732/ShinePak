@@ -6,8 +6,13 @@ const Footer = () => {
     <footer className="bg-[#000] text-white py-12 px-6 md:px-16">
       <div className="max-w-7xl mx-auto text-center space-y-6">
 
-        <div className="text-3xl font-bold text-white">
-          Logo
+          <div className="flex items-center justify-center">
+          <img
+            src="/images/logo.jpg"
+            alt="MAR Group Logo"
+            className="h-10 sm:h-12 md:h-35 w-auto object-contain"
+            onError={(e) => console.error("Logo failed to load:", e)}
+          />
         </div>
 
         {/* Navigation Links */}

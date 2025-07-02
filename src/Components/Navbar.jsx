@@ -1,26 +1,26 @@
 import React from 'react';
-import { FaLinkedin, FaGithub, FaTelegram, FaFacebook } from 'react-icons/fa';
+import { FaLinkedin, FaTwitter, FaFacebook } from 'react-icons/fa';
 
 const socialLinks = [
   { icon: <FaLinkedin className="text-2xl sm:text-3xl" />, link: 'https://linkedin.com', name: 'LinkedIn' },
-  { icon: <FaGithub className="text-2xl sm:text-3xl" />, link: 'https://github.com', name: 'GitHub' },
-  { icon: <FaTelegram className="text-2xl sm:text-3xl" />, link: 'https://telegram.org', name: 'Telegram' },
+  { icon: <FaTwitter className="text-2xl sm:text-3xl" />, link: 'https://Twitter.com', name: 'Twitter' },
+ 
   { icon: <FaFacebook className="text-2xl sm:text-3xl" />, link: 'https://facebook.com', name: 'Facebook' },
 ];
 
 const Navbar = () => {
   return (
-    <nav className="w-full bg-black text-white shadow-lg fixed top-0 left-0 z-50">
+    <nav className="w-full bg-black text-white shadow-lg fixed top-0 left-0 z-50 text">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 sm:h-20 md:h-24">
         {/* Left: Social Icons (Hidden on Mobile) */}
-        <div className="hidden sm:flex gap-4 md:gap-6">
+        <div className="hidden sm:flex gap-1 md:gap-2">
           {socialLinks.map((item, index) => (
             <a
               key={index}
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-300 hover:text-red-500 transition-colors duration-300 ease-in-out transform hover:scale-110"
+              className="text-gray-300 hover:text-red-500 transition-colors duration-300 ease-in-out transform hover:scale-110 h-1"
               aria-label={`Visit our ${item.name} page`}
             >
               {item.icon}
@@ -28,9 +28,14 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Center: Logo */}
-        <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-wider bg-gradient-to-r from-red-500 to-red-700 bg-clip-text text-transparent">
-          MAR GROUP
+        {/* Center: Logo Image */}
+        <div className="flex items-center justify-center mt-5">
+          <img
+            src="/images/logo.jpg"
+            alt="MAR Group Logo"
+            className="h-10 sm:h-12 md:h-35 w-auto object-contain"
+            onError={(e) => console.error("Logo failed to load:", e)}
+          />
         </div>
 
         {/* Right: Button */}
