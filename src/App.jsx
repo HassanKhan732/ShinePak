@@ -16,6 +16,7 @@ import PeopleProfileDetail from "./Components/PeopleProfileDetail";
 import SliderProfileDetail from "./Components/SliderProfileDetail";
 import CreatorProfileDetail from "./Components/CreatorProfileDetail";
 import Preloader from "./Components/Preloader";
+import Form from "./Components/Form";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -24,7 +25,7 @@ const App = () => {
     // Simulate loading time
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 3000); // 3 seconds delay
+    }, 4000); // 4 seconds delay to match preloader animation
 
     return () => clearTimeout(timer);
   }, []);
@@ -49,6 +50,7 @@ const App = () => {
             <Route path="/people-profile/:id" element={<PeopleProfileDetail />} />
             <Route path="/slider-profile/:id" element={<SliderProfileDetail />} />
             <Route path="/creator-profile/:id" element={<CreatorProfileDetail />} />
+            <Route path="/form" element={<Form />} />
           </Routes>
           <Banner />
           <Footer />
