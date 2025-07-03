@@ -5,7 +5,7 @@ const sliderProfiles = [
     role: "Businessman",
     description: "Specialist in textile export and brand strategy.",
     image: "public/images/men.jpeg",
-    date: "April 10, 2025",
+    date: "April 10, 1902",
     bio: "Ali is a veteran in the textile industry, leading export initiatives and building global brand strategies.",
     skills: ["Textile Export", "Brand Strategy", "International Business", "Supply Chain"],
   },

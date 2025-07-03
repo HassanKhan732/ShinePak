@@ -341,7 +341,7 @@ const allProfiles = [
     likes: "688",
     image: "https://randomuser.me/api/portraits/women/80.jpg",
     description: "Connects talent with opportunities.",
-    date: "October 10, 2022",
+    date: "October 10, 2012",
     bio: "Nimra excels in talent acquisition and creating positive workplace cultures.",
     skills: ["Recruitment", "Employee Relations", "HR Strategy", "Training"],
   },
