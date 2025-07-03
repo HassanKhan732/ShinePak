@@ -10,13 +10,13 @@ import Profiles from "./Components/Profiles";
 import GeniusHub from "./Components/GeniusHub";
 import Store from "./Components/Store";
 import Banner from "./Components/Banner";
-import Footer from "./Components/Footer";
 import ProfileDetail from "./Components/ProfileDetail";
 import PeopleProfileDetail from "./Components/PeopleProfileDetail";
 import SliderProfileDetail from "./Components/SliderProfileDetail";
 import CreatorProfileDetail from "./Components/CreatorProfileDetail";
 import Preloader from "./Components/Preloader";
 import Form from "./Components/Form";
+import Footer from "./Components/Footer";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
