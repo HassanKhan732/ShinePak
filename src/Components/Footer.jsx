@@ -24,7 +24,7 @@ const Footer = () => {
           <a href="#" className="hover:text-red-500 transition">Privacy</a>
         </div>
 
-        {/* Social Icons */}
+        
         <div className="flex justify-center gap-5 text-xl text-white">
           <a href="#"><FaFacebookF className="hover:text-white transition" /></a>
           <a href="#"><FaTwitter className="hover:text-white transition" /></a>

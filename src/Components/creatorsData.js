@@ -45,8 +45,8 @@ const creatorsData = [
     role: "GoHighLevel Expert",
     description: "Automates marketing funnels with GoHighLevel.",
     image: "https://randomuser.me/api/portraits/men/50.jpg",
-    date: "February 15, 2023",
-    bio: "Yasir builds efficient marketing automation systems using GoHighLevel for businesses.",
+    date: "February 15, 2003",
+    bio: "Yasir builds efficient marketing and systems using GoHighLevel for businesses.",
     skills: ["GoHighLevel", "Marketing Automation", "CRM", "Funnel Design"],
   },
 ];
