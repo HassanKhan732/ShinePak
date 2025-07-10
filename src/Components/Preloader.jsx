@@ -8,7 +8,7 @@ const Preloader = () => {
       left: 0,
       width: '100%',
       height: '100%',
-      background: 'linear-gradient(135deg, #000000 )',
+      background:'black',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
@@ -25,16 +25,16 @@ const Preloader = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        overflow: 'hidden',
+        overflow: 'hidden'
       }}>
         <img
-            src="/images/logo.jpg"
+          src="/images/logo.jpg"
           alt="MAR Group Logo"
           style={{
-            width: '100px',
-            height: '100px',
+            width: '120px',
+            height: '120px',
             borderRadius: '50%',
-            objectFit: 'cover',
+            objectFit: 'contain',
             animation: 'logoFadeIn 1s ease-out forwards'
           }}
           onError={(e) => console.error("Preloader logo failed to load:", e)}
@@ -44,8 +44,8 @@ const Preloader = () => {
           width: '120px',
           height: '120px',
           border: '4px solid transparent',
-          borderTop: '4px solid #ff0000',
-          borderRight: '4px solid #ff0000',
+          borderTop: '4px solid #ef4444',
+          borderRight: '4px solid #dc2626',
           borderRadius: '50%',
           animation: 'spin 1.5s linear infinite'
         }}></div>
@@ -58,7 +58,7 @@ const Preloader = () => {
         <span style={{
           width: '12px',
           height: '12px',
-          background: '#ff0000',
+          background: '#ef4444',
           borderRadius: '50%',
           animation: 'pulseDot 1.2s ease-in-out infinite',
           animationDelay: '0s'
@@ -66,7 +66,7 @@ const Preloader = () => {
         <span style={{
           width: '12px',
           height: '12px',
-          background: '#ff0000',
+          background: '#dc2626',
           borderRadius: '50%',
           animation: 'pulseDot 1.2s ease-in-out infinite',
           animationDelay: '0.2s'
@@ -74,7 +74,7 @@ const Preloader = () => {
         <span style={{
           width: '12px',
           height: '12px',
-          background: '#ff0000',
+          background: '#b91c1c',
           borderRadius: '50%',
           animation: 'pulseDot 1.2s ease-in-out infinite',
           animationDelay: '0.4s'
@@ -129,8 +129,8 @@ const Preloader = () => {
               height: 160px;
             }
             img[alt="MAR Group Logo"] {
-              width: 140px;
-              height: 140px;
+              width: 160px;
+              height: 160px;
             }
             div[style*="border: 4px"] {
               width: 160px;
@@ -148,8 +148,8 @@ const Preloader = () => {
               height: 180px;
             }
             img[alt="MAR Group Logo"] {
-              width: 160px;
-              height: 160px;
+              width: 180px;
+              height: 180px;
             }
             div[style*="border: 4px"] {
               width: 180px;

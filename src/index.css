@@ -1,4 +1,9 @@
 @import "tailwindcss";
+
+body {
+  background: #000000;
+}
+
 /* CSS */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
