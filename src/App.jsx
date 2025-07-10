@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import Navbar2 from "./Components/Navbar2";
 import Home from "./Components/Home";
@@ -10,13 +10,27 @@ import Profiles from "./Components/Profiles";
 import GeniusHub from "./Components/GeniusHub";
 import Store from "./Components/Store";
 import Banner from "./Components/Banner";
+import Footer from "./Components/Footer";
 import ProfileDetail from "./Components/ProfileDetail";
 import PeopleProfileDetail from "./Components/PeopleProfileDetail";
 import SliderProfileDetail from "./Components/SliderProfileDetail";
 import CreatorProfileDetail from "./Components/CreatorProfileDetail";
 import Preloader from "./Components/Preloader";
 import Form from "./Components/Form";
-import Footer from "./Components/Footer";
+
+// ScrollToTop component to handle scroll-to-top on route change
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Smooth scroll for better UX
+    });
+  }, [pathname]);
+
+  return null;
+};
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -35,9 +49,10 @@ const App = () => {
       {isLoading ? (
         <Preloader />
       ) : (
-        <div>
+        <div className="pt-32 sm:pt-40 md:pt-48">
           <Navbar />
           <Navbar2 />
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/trending" element={<Trending />} />
