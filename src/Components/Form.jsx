@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import database from '../firebase/firebase'; // Correct path (ensure folder is lowercase 'firebase')
+import { ref, push } from 'firebase/database'; // Correct import from Firebase SDK
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -45,20 +47,32 @@ const Form = () => {
       setErrors(validationErrors);
       return;
     }
-    // Handle form submission (e.g., API call)
-    console.log('Form submitted:', formData);
-    // Reset form
-    setFormData({
-      fullName: '',
-      email: '',
-      phone: '',
-      company: '',
-      role: '',
-      interests: [],
-      message: ''
-    });
-    setErrors({});
-    alert('Form submitted successfully!');
+
+    // Save form data to Firebase Realtime Database
+    const formRef = ref(database, 'submissions');
+    push(formRef, {
+      ...formData,
+      timestamp: new Date().toISOString()
+    })
+      .then(() => {
+        console.log('Form submitted to Firebase:', formData);
+        alert('Form submitted successfully!');
+        // Reset form
+        setFormData({
+          fullName: '',
+          email: '',
+          phone: '',
+          company: '',
+          role: '',
+          interests: [],
+          message: ''
+        });
+        setErrors({});
+      })
+      .catch((error) => {
+        console.error('Error saving to Firebase:', error);
+        alert('Error submitting form: ' + error.message);
+      });
   };
 
   return (
@@ -202,24 +216,22 @@ const Form = () => {
           </Link>
         </div>
       </div>
-      <style>
-        {`
-          .animate-fade-in {
-            animation: fadeIn 1s ease-out;
-          }
-          .animate-slide-up {
-            animation: slideUp 0.8s ease-out;
-          }
-          @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-          }
-          @keyframes slideUp {
-            0% { transform: translateY(20px); opacity: 0; }
-            100% { transform: translateY(0); opacity: 1; }
-          }
-        `}
-      </style>
+      <style jsx>{`
+        .animate-fade-in {
+          animation: fadeIn 1s ease-out;
+        }
+        .animate-slide-up {
+          animation: slideUp 0.8s ease-out;
+        }
+        @keyframes fadeIn {
+          0% { opacity: 0; }
+          100% { opacity: 1; }
+        }
+        @keyframes slideUp {
+          0% { transform: translateY(20px); opacity: 0; }
+          100% { transform: translateY(0); opacity: 1; }
+        }
+      `}</style>
     </section>
   );
 };

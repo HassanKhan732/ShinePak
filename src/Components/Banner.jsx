@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -11,8 +12,7 @@ const Banner = () => {
             border-radius: 0.5rem;
             max-width: 1280px;
             margin: 0 auto;
-                height: 16rem;
-
+            height: 16rem;
           }
           .banner-image {
             width: 100%;
@@ -47,19 +47,21 @@ const Banner = () => {
         `}
       </style>
       <section style={{ backgroundColor: "#000", padding: "3rem 1.5rem" }}>
-        <div className="banner-container">
-          {/* Image */}
-          <img
-            src="/images/bnr2.webp" // Replace with your image path
-            alt="Banner"
-            className="banner-image"
-            onError={(e) => console.log("Image failed to load:", e)}
-          />
-          {/* Text Overlay */}
-          <div className="banner-text-overlay">
-            <h2 className="banner-text">Grow With ShinePak</h2>
+        <Link to="/form">
+          <div className="banner-container">
+            {/* Image */}
+            <img
+              src="/images/bnr2.webp"
+              alt="Banner"
+              className="banner-image"
+              onError={(e) => console.log("Image failed to load:", e)}
+            />
+            {/* Text Overlay */}
+            <div className="banner-text-overlay">
+              <h2 className="banner-text">Grow With ShinePak</h2>
+            </div>
           </div>
-        </div>
+        </Link>
       </section>
     </>
   );
