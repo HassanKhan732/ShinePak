@@ -16,7 +16,6 @@ import SliderProfileDetail from "./Components/SliderProfileDetail";
 import CreatorProfileDetail from "./Components/CreatorProfileDetail";
 import Preloader from "./Components/Preloader";
 import Form from "./Components/Form";
-import SubmissionList from "./Components/SubmissionList";
 import Footer from "./Components/Footer";
 
 const App = () => {
@@ -52,7 +51,6 @@ const App = () => {
             <Route path="/slider-profile/:id" element={<SliderProfileDetail />} />
             <Route path="/creator-profile/:id" element={<CreatorProfileDetail />} />
             <Route path="/form" element={<Form />} />
-            <Route path="/submissions" element={<SubmissionList />} />
           </Routes>
           <Banner />
           <Footer />
