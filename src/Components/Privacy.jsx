@@ -28,7 +28,7 @@ const Privacy = () => {
             You have the right to access, update, or delete your personal information. Contact us at support@shinepak.com to exercise these rights.
           </p>
           <p>
-            For more details, please contact us via our <a href="/contact" className="text-red-500 hover:underline">Contact page</a>.
+            For more details, please contact us via our <a href="/form" className="text-red-500 hover:underline">Contact page</a>.
           </p>
         </div>
       </div>

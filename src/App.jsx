@@ -17,7 +17,9 @@ import SliderProfileDetail from "./Components/SliderProfileDetail";
 import CreatorProfileDetail from "./Components/CreatorProfileDetail";
 import Preloader from "./Components/Preloader";
 import Form from "./Components/Form";
-
+import About from "./Components/About"
+import Services from "./Components/Services"
+import Privacy from "./Components/Privacy"
 // ScrollToTop component to handle scroll-to-top on route change
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -66,6 +68,10 @@ const App = () => {
             <Route path="/slider-profile/:id" element={<SliderProfileDetail />} />
             <Route path="/creator-profile/:id" element={<CreatorProfileDetail />} />
             <Route path="/form" element={<Form />} />
+            <Route path="/about" element={<About/>} />
+            <Route path="/services" element={<Services/>} />
+            <Route path="/privacy" element={<Privacy/>} />
+
           </Routes>
           <Banner />
           <Footer />
