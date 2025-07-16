@@ -5,30 +5,30 @@ const Privacy = () => {
     <section className="min-h-screen bg-black text-white py-12 sm:py-16 px-4 sm:px-6 md:px-8">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-6 bg-gradient-to-r from-red-500 to-red-700 bg-clip-text text-transparent animate-fade-in">
-          Privacy Policy
+          Privacy Policy: Shining Safely
         </h1>
         <div className="text-lg sm:text-xl text-gray-300 space-y-6 animate-slide-up">
           <p>
-            At ShinePak, we value your privacy and are committed to protecting your personal information. This Privacy Policy outlines how we collect, use, and safeguard your data.
+            At ShinePak, we’re committed to empowering the brightest talents and businesses while safeguarding your privacy. This Privacy Policy explains how we collect, use, and protect your data to help you shine securely in the digital world. 💫 #ShinePak
           </p>
           <h2 className="text-xl sm:text-2xl font-semibold text-red-500">Information We Collect</h2>
           <p>
-            We may collect personal information such as your name, email, and contact details when you interact with our services, including our contact forms and analytics tools.
+            We collect minimal personal information, such as your name, email, or contact details, when you join our community through forms or interact with our services to promote your talent or business.
           </p>
           <h2 className="text-xl sm:text-2xl font-semibold text-red-500">How We Use Your Information</h2>
           <p>
-            Your data is used to provide and improve our services, respond to inquiries, and deliver personalized marketing content. We do not share your information with third parties without your consent, except as required by law.
+            Your data helps us amplify your brilliance by delivering tailored services, responding to your inquiries, and creating personalized marketing strategies. We never share your information with third parties without your consent, except as required by law.
           </p>
           <h2 className="text-xl sm:text-2xl font-semibold text-red-500">Data Security</h2>
           <p>
-            We implement industry-standard security measures to protect your data from unauthorized access or disclosure.
+            We use industry-leading security measures to protect your data, ensuring that your journey to shine with ShinePak is safe from unauthorized access or disclosure.
           </p>
           <h2 className="text-xl sm:text-2xl font-semibold text-red-500">Your Rights</h2>
           <p>
-            You have the right to access, update, or delete your personal information. Contact us at support@shinepak.com to exercise these rights.
+            You have full control over your data. You can access, update, or delete your personal information at any time. Join us in shining brightly by contacting us at support@shinepak.com to exercise your rights.
           </p>
           <p>
-            For more details, please contact us via our <a href="/form" className="text-red-500 hover:underline">Contact page</a>.
+            For more details, please reach out via our Contact page
           </p>
         </div>
       </div>

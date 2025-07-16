@@ -85,8 +85,7 @@ const Navbar2 = () => {
             MAR 456
           </h2>
           <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
-            MAR Group established IT Activities in 2019 as a dynamic group of companies. Under the umbrella of IT Activities, several impactful projects operate, including UL Brands, Genius Profiles, IT RankUp, and Dreaming Flight.
-          </p>
+ShinePak Group’s IT Activities since 2019, empowers the brightest talents and businesses through projects like UL Brands, Genius Profiles, IT RankUp, and Dreaming Flight. Join us to shine! 💫 #ShinePak          </p>
 
           <h3 className="text-lg sm:text-xl mt-4 font-semibold text-white">Trending Profiles</h3>
           <div className="flex flex-col gap-3">
