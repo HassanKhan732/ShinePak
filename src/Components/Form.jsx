@@ -65,7 +65,7 @@ const Form = () => {
     <section className="min-h-screen bg-black text-white py-12 sm:py-16 px-4 sm:px-6 md:px-8">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 sm:mb-12 bg-gradient-to-r from-red-500 to-red-700 bg-clip-text text-transparent animate-fade-in">
-          Get Started with MAR Group
+          Get Started with ShinePak Group
         </h1>
         <form
           onSubmit={handleSubmit}
